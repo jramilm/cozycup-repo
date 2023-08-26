@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../img/banner.jpg");
-  background-position: center-right;
   background-size: cover;
+  background-position-x: 9%;
 }
 
 .container{
@@ -67,6 +67,17 @@ body{
 	color: #fff;
 	letter-spacing: 2px;
 	line-height: 50px;
+	margin-bottom: 11px;
+	position: relative;
+}
+
+.featured h2::before {
+    content: '';
+    position: absolute;
+    width: 39%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
 }
 
 .signature {
@@ -95,63 +106,88 @@ body{
 .menu {
     padding: 80px 0;
     text-align: center;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../img/menu.jpg");
+	background-position: center;
+	background-size: cover;
 }
 
 .menus {
     display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
+    margin-left: 120px;
+    margin-right: 155px;
 }
 
 .menu_selection {
 	display: flex;
 	justify-content: space-between;
-	flex-wrap: wrap;
 }
 
 .menu_class {
-	flex-basis: calc(2.33% - 9px);
 	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
-.menu h2 {
+
+.menu_title h2 {
+    font-size: 40px;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 100;
+    color: #fff;
+    margin-bottom: 55px;
+    border: solid 1px;
+    display: inline-block;
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.menu_selection h2 {
     font-size: 40px;
 	font-family: 'Raleway',sans-serif;
 	font-weight: 100;
 	color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 55px;
+	position: relative;
 }
 
+.menu_selection h2::before {
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #00875c;
+    bottom: 181px;
+	transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+} 
+
+.menu_selection h2:hover::before {
+	transform-origin: left;
+	transform: scaleX(1);
+}
 
 .menu h3 {
     font-size: 17px;
     font-family: 'Raleway',sans-serif;
-    font-weight: 100;
+    font-weight: 100%;
     color: #fff;
     margin-bottom: 15px;
     margin-top: 11px;
-}
-.menu p {
-    font-size: 15px;
-	font-family: 'Raleway',sans-serif;
-	color: #fff;
-	margin-bottom: 46px;
+	border-bottom: 2px dashed #00875c;
+	padding-bottom: 4px;
 }
 
-.menu_title h2::before {
-	content: '';
-	position: absolute;
-	width: 80px;
-	height: 3px;
-	background-color: #00875c;
-	bottom: -149%;
-	left: 50%;
-	transform: translateX(-50%)
+.menu p {
+    font-size: 15px;
+    font-family: 'Raleway',sans-serif;
+    color: #fff;
+    margin-bottom: 46px;
+    color: blanchedalmond;
 }
 
 .menu_class img {
@@ -159,6 +195,11 @@ body{
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
+	transition: transform .7s ease-in-out;
+}
+
+.menu_class img:hover {
+	transform: rotate(360deg);
 }
 
 .about {
