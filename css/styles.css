@@ -12,7 +12,7 @@ body {
 }
 
 .container{
-  max-width: 1300px;
+  max-width: 95%;
   padding: 2px 25px;
   display: flex;
   align-items: center;
@@ -20,7 +20,8 @@ body {
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 30%;
+	margin-left: 3%
 }
 
 .hero {
@@ -28,7 +29,7 @@ body {
     background-size: cover;
 	background-position: auto;
     text-align: center;
-    padding: 80px 0;
+    padding: 9% 0;
 }
 
 .hero h1 {
@@ -72,16 +73,9 @@ body {
 	letter-spacing: 2px;
 	line-height: 50px;
 	margin-bottom: 11px;
-	position: relative;
-}
-
-.featured h2::before {
-    content: '';
-    position: absolute;
-    width: 39%;
-    height: 2px;
-    background-color: #fff;
-    bottom: 0;
+	border-bottom: 2px solid;
+	margin-left: 31%;
+	max-width: 40%;
 }
 
 .signature {
@@ -99,7 +93,7 @@ body {
 }
 
 .featured img {
-    max-width: 25%;
+    max-width: 22vw;
     height: auto;
     margin: 0 auto; 
     display: block;
@@ -164,7 +158,7 @@ body {
     width: 100%;
     height: 4px;
     background-color: #00875c;
-    bottom: 181px;
+    bottom: 172px;
 	transform-origin: right;
     transform: scaleX(0);
     transition: transform .3s ease-in-out;
@@ -193,6 +187,16 @@ body {
     margin-bottom: 40px;
     color: blanchedalmond;
     margin-top: -15px;
+}
+
+.menu h4 {
+	font-size: 12px;
+	font-family: 'Raleway',sans-serif;
+	margin-bottom: 30px;
+	color: blanchedalmond;
+	margin-top: -25px;
+	background-color: rgb(129 60 18 / 90%);
+	padding: 3px;
 }
 
 .menu_class img {
@@ -242,19 +246,12 @@ body {
 .about h2 {
 	font-size: 39px;
 	font-family: 'Raleway',sans-serif;
-	font-weight: 100;
-	color: #fff;
+	font-weight: bold;
 	margin-bottom: 16px;
 	position: relative;
-}
-
-.about h2::before {
-    content: '';
-    position: absolute;
-    width: 26%;
-    height: 2px;
-    background-color: #fff;
-    bottom: 0;
+	border-bottom: 2px solid;
+	border-color: white;
+	color: burlywood	;
 }
 
 .about h4 {
@@ -298,7 +295,7 @@ body {
 	font-family: 'Raleway',sans-serif;
 	font-weight: 100%;
 	color: #fff;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	line-height: 25px;
 	margin-bottom: 30px;
 	margin-top: 10px;
@@ -334,6 +331,19 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}	
+
+.navbar {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.75);
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.navbar-menu {
+	padding-right: -5%;
 }
 
 .navbar-menu a{
@@ -392,7 +402,7 @@ footer {
 }
 
 .card img {
-  max-width: 97%;
+  max-width: 100%;
   height: 192px;
   border-radius: 10px;
 }
@@ -599,6 +609,7 @@ input[type=newsletter]:focus {
 	padding: 0px;
 	height: 21px;
 	margin: -6px;
+	max-width: 100%
 }
 
 .nletterbox {
@@ -609,17 +620,14 @@ input[type=newsletter]:focus {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1; 
 }
  
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888; 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
