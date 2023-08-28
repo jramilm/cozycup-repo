@@ -62,8 +62,10 @@ body {
 
 .featured {
 	padding: 50px 0;
-    text-align: center;
+	text-align: center;
+	padding-bottom: 0;
 }
+
 
 .featured h2 {
 	font-size: 30px;
@@ -660,7 +662,7 @@ input[type=newsletter]:focus {
 	line-height: 45px;
 }
 
-.fproducts h5 {
+.fproducts h5, .fpcontainer3 h4 {
 	font-size: 15px;
 	font-family: 'Raleway',sans-serif;
 	color: #fff;
@@ -752,5 +754,54 @@ input[type=newsletter]:focus {
 	margin-bottom: 50px;
 	background-color: rgb(87 55 36 / 90%);
 	box-shadow: 0px 7px 15px;
-	
 }
+
+.fpcontainer2 {
+    width: 100%;
+    padding: 1%;
+    text-align: left;
+    border: 5px double white;
+    margin-right: 40px;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.fpcontainer3 {
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../img/bg2.jpg");
+	display: flex;
+	align-items: center;
+	padding: 50px;
+	padding-top: 80px;
+}
+
+.gallery {
+	--s: 150px; 
+	--g: 10px;  
+	--f: 1.5;   
+	display: grid;
+	gap: var(--g);
+	width: calc(3*var(--s) + 2*var(--g));
+	aspect-ratio: 1;
+	grid-template-columns: repeat(3,auto);
+}
+
+.gallerycont {
+    margin-right: 2%;
+}
+
+.gallery > img {
+	width: 0;
+	height: 0;
+	min-height: 100%;
+	min-width: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	filter: grayscale(80%);
+	transition: .35s linear;
+}
+
+.gallery img:hover{
+	filter: grayscale(0);
+	width:  calc(var(--s)*var(--f));
+	height: calc(var(--s)*var(--f));
+}
+
